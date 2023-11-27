@@ -1,0 +1,72 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+  font-family: var(--ui-font-sans);
+}
+
+.track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 1.25rem;
+  padding: 2px;
+  border: none;
+  border-radius: var(--ui-radius-full);
+  background: var(--ui-color-border-strong);
+  cursor: pointer;
+  transition: background-color var(--ui-duration-normal);
+}
+
+.track[aria-checked='true'] {
+  background: var(--ui-color-accent);
+}
+
+.track:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-focus-ring);
+}
+
+.thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: var(--ui-radius-full);
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+  transition: transform var(--ui-duration-normal);
+}
+
+.track[aria-checked='true'] .thumb {
+  transform: translateX(1rem);
+}
+
+.label {
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text);
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled .track,
+.disabled .label {
+  cursor: not-allowed;
+}
+
+@media (forced-colors: active) {
+  .track {
+    border: 1px solid ButtonText;
+  }
+
+  .track[aria-checked='true'] {
+    background: Highlight;
+  }
+
+  .thumb {
+    background: ButtonText;
+  }
+}
