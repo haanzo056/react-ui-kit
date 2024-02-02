@@ -1,0 +1,101 @@
+.viewport {
+  position: fixed;
+  z-index: var(--ui-z-toast);
+  width: min(24rem, calc(100vw - var(--ui-space-8)));
+  pointer-events: none;
+}
+
+.viewport[data-position='top-right'] {
+  top: var(--ui-space-4);
+  right: var(--ui-space-4);
+}
+
+.viewport[data-position='bottom-right'] {
+  bottom: var(--ui-space-4);
+  right: var(--ui-space-4);
+}
+
+.viewport[data-position='bottom-center'] {
+  bottom: var(--ui-space-4);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ui-space-3);
+  padding: var(--ui-space-3) var(--ui-space-3) var(--ui-space-3) var(--ui-space-4);
+  border: 1px solid var(--ui-color-border);
+  border-left-width: 4px;
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-surface-raised);
+  color: var(--ui-color-text);
+  font-family: var(--ui-font-sans);
+  box-shadow: var(--ui-shadow-md);
+  pointer-events: auto;
+  animation: toast-in var(--ui-duration-normal) ease-out;
+}
+
+.toast[data-variant='info'] {
+  border-left-color: var(--ui-color-accent);
+}
+
+.toast[data-variant='success'] {
+  border-left-color: var(--ui-color-success);
+}
+
+.toast[data-variant='error'] {
+  border-left-color: var(--ui-color-danger);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--ui-text-sm);
+  font-weight: 600;
+}
+
+.description {
+  margin: var(--ui-space-1) 0 0;
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text-muted);
+}
+
+.action {
+  align-self: center;
+  padding: var(--ui-space-1) var(--ui-space-2);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-sm);
+  background: transparent;
+  color: var(--ui-color-text);
+  font: inherit;
+  font-size: var(--ui-text-xs);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.action:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-focus-ring);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
