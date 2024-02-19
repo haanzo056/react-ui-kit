@@ -1,0 +1,117 @@
+.root {
+  font-family: var(--ui-font-sans);
+  color: var(--ui-color-text);
+}
+
+.scroll {
+  overflow-x: auto;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--ui-text-sm);
+}
+
+.caption {
+  padding: var(--ui-space-3) var(--ui-space-4);
+  text-align: left;
+  font-weight: 600;
+}
+
+.th {
+  padding: var(--ui-space-2) var(--ui-space-4);
+  border-bottom: 1px solid var(--ui-color-border);
+  background: var(--ui-color-surface);
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-text-xs);
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ui-space-1);
+  margin: calc(var(--ui-space-1) * -1) calc(var(--ui-space-2) * -1);
+  padding: var(--ui-space-1) var(--ui-space-2);
+  border: none;
+  border-radius: var(--ui-radius-sm);
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.sortButton:hover {
+  color: var(--ui-color-text);
+}
+
+.sortButton:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-focus-ring);
+}
+
+.sortIcon {
+  flex-shrink: 0;
+}
+
+.td {
+  padding: var(--ui-space-3) var(--ui-space-4);
+  border-bottom: 1px solid var(--ui-color-border);
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background: var(--ui-color-surface);
+}
+
+.empty {
+  padding: var(--ui-space-8) var(--ui-space-4);
+  text-align: center;
+  color: var(--ui-color-text-muted);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-4);
+  margin-top: var(--ui-space-3);
+  font-size: var(--ui-text-sm);
+}
+
+.status {
+  color: var(--ui-color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.pageButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+}
+
+.pageLabel {
+  font-variant-numeric: tabular-nums;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
