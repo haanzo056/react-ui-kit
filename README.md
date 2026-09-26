@@ -1,11 +1,13 @@
 # ui-kit
 
+[![CI](https://github.com/haanzo056/react-ui-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/haanzo056/react-ui-kit/actions/workflows/ci.yml) [![Storybook](https://img.shields.io/badge/Storybook-live-FF4785?logo=storybook&logoColor=white)](https://haanzo056.github.io/react-ui-kit/) ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white) ![License](https://img.shields.io/github/license/haanzo056/react-ui-kit)
+
 A small React component library I use as a base for side projects. The focus is on getting keyboard and screen reader behaviour right for the handful of components every app ends up needing, not on covering everything.
 
 Components: Button, IconButton, Input, Textarea, Select, Checkbox, Switch, Dialog, Tooltip, Tabs, Toast, DataTable.
 Hooks: `useControllableState`, `useFocusTrap`, `useId`, `useMediaQuery`, plus `useSelect` if you want the select logic without the markup.
 
-Storybook is deployed to GitHub Pages from `main`.
+Storybook is deployed to GitHub Pages from `main`: **[haanzo056.github.io/react-ui-kit](https://haanzo056.github.io/react-ui-kit/)**.
 
 ## Install
 
